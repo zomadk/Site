@@ -1,0 +1,98 @@
+    div {
+        background-image: url(night.gif);
+        height: 0px;
+        width: 0px;
+    }
+    
+    body {
+        background-image: url(night.gif);
+        height: 10000px;
+        width: 30000px;
+    }
+    
+    #trees {
+        /*  #name - references ids   */
+        position: fixed;
+        height: 784px;
+        width: 1450px;
+    }
+    /* 
+.cl1
+ .name - references classes  
+
+{}
+ */
+    
+    #moon-cir {
+        fill: rgb(230, 207, 193);
+    }
+    
+    #mars-cir {
+        fill: rgb(148, 47, 4);
+        animation-name: glow;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+    }
+    
+    @keyframes glow {
+        0% {
+            fill: rgb(148, 47, 4);
+        }
+        50% {
+            fill: rgb(218, 79, 19);
+        }
+        75% {
+            fill: rgb(121, 44, 15);
+        }
+    }
+    
+    #moon-svg {
+        position: absolute;
+        top: 200px;
+        left: 600px;
+        z-index: -1;
+    }
+    
+    #mars-svg {
+        position: absolute;
+        top: 600px;
+        left: 1200px;
+        z-index: +3;
+    }
+    
+    #comet {
+        position: absolute;
+        top: 0;
+        left: 1400px;
+        z-index: -1;
+        animation-name: fly;
+        animation-duration: 5s;
+        animation-iteration-count: 1;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+    }
+    
+    @keyframes fly {
+        from {
+            top: 0;
+            left: 1400px;
+        }
+        to {
+            top: 800px;
+            left: 0px;
+            opacity: 0;
+        }
+    }
+    
+    #wiki {
+        position: absolute;
+        height: 300px;
+        width: 500px;
+        top: 600px;
+        left: 1350px;
+        opacity: 0;
+    }
+    
+    #container:hover #wiki {
+        opacity: 1;
+    }
